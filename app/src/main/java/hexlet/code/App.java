@@ -10,6 +10,7 @@ class App {
         System.out.println("Please enter the game number and press Enter");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calculator");
         System.out.println("0 - Exit");
 
         int number = scanner.nextInt();
@@ -20,6 +21,8 @@ class App {
             Cli.userName();
         } else if (number == 2 ) {
             EvenGame.evenGame();
+        } else if (number == 3) {
+            Calculator.calcGame();
         } else {
             System.exit(0);
         }
