@@ -21,7 +21,7 @@ public class EvenGame {
 
             int number = random.nextInt(100);
             System.out.println("Question: " + number);
-            System.out.println("Your answer is: ");
+            System.out.print("Your answer is: ");
 
             String answer = scanner.nextLine();
 

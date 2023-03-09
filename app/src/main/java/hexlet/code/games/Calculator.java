@@ -14,8 +14,6 @@ public class Calculator {
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
 
-
-
         System.out.println("What is the result of the expression?");
 
         for (int i = 0; i < 3; i++) {
@@ -30,20 +28,23 @@ public class Calculator {
         int b = random.nextInt(100);
 
         System.out.println("Question: " + a + name[index] + b);
+        System.out.print("Your answer is: ");
 
-        System.out.println("Your answer is: ");
         int number = scanner.nextInt();
 
             if (number == (a + b) || number == (a * b)) {
                 System.out.println("Correct!");
-
-            } else if (number != (a * b) || number != (a + b)) {
+            } else if (number != (a * b)) {
+                System.out.println(number + " is wrong answer ;(. Correct answer was: " + (a * b));
+                System.out.println("Let's try again, " + userName + "!");
+                break;
+            } else if (number != (a + b)) {
                 System.out.println(number + " is wrong answer ;(. Correct answer was: " + (a + b));
                 System.out.println("Let's try again, " + userName + "!");
                 break;
             }
-            if (i == 2) {
-                System.out.println("Congratulations, " + userName);
+                if (i == 2) {
+                    System.out.println("Congratulations, " + userName);
             }
         }
     }
